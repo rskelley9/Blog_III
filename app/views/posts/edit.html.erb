@@ -1,0 +1,28 @@
+<h3>Edit Post</h3>
+
+<%= form_for :post, url: post_path(@post.id) },
+method: :patch do |f| %>
+
+<p>
+  <%= f.label :title %><br>
+  <%= f.text_field :title %>
+</p>
+
+<p>
+  <%= f.label :content %><br>
+  <%= f.text_area :content %>
+</p>
+
+<p>
+  Great Movie <%= f.check_box :check %>
+  Terrible Movie <%= f.check_box :check %><br>
+  <%=f.submit :SUBMIT  %>
+</p>
+<% end %>
+
+<%= link_to 'Go Back', posts_path %>
+
+<% if @errors %>
+
+  <p><%= @errors.sample %></p>
+  <% end %>

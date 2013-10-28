@@ -11,8 +11,11 @@
   <%=f.label :content  %>
   <%=f.text_area :content  %>
 </p>
-Praise? <%= f.check_box :check %>
-Complaint?<%= f.check_box :check %><br>
+Great Movie <%= f.check_box :check %>
+Terrible Movie <%= f.check_box :check %><br>
 <%=f.submit :SUBMIT  %>
 
 <%end%>
+
+<%= link_to 'Home', posts_path %>
+<%= link_to 'Back', posts_path %>
